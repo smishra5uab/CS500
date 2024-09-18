@@ -1,0 +1,12 @@
+test
+this
+file
+is
+apple
+banana
+another
+while
+for
+do
+when
+why
