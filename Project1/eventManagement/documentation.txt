@@ -1,0 +1,30 @@
+Event Management - Documentation
+
+Description:
+    -> The program here is used to manage events and can be extended for n number of event types.
+    -> The functionality to RSVP is also added to the program.
+    -> Functionalities: add event, view events, view upcoming events, RSVP, search events by various parameters.
+
+Use of inheritance:
+    -> Inheritance has been used at multiple points of this program.
+    -> Firstly it has been used at the different events as their functionality extends from the parent class Event.
+    -> A decent amount of inheritance is also used at the search strategy implementation.
+
+Why vector of pointers:
+    -> For handling dynamically allocated objects, in our case, events!
+    -> Since polymorphism is implemented here, the pointers shall reference to the exact event being referred by each subclass.
+    -> This shall also ensure that object slicing does not take place.
+
+Why design patterns:
+    -> Design patterns bring in the flexibility to expand the code for future implementations without having to modify the current implementations.
+    -> It introduces a concept of layering code i.e. each layer (by interface, like the Model-View-Controller approach) is independant and detatchable.
+    -> Scalability is easy and can expand horizontally across as many events as needed.
+    -> Dependancy injection becomes effortless. Plug and play with whatever is needed.
+
+Challenges encountered:
+    -> Since C++ is still a relatively new programming language to me to code in, I did face the problem of syntaxes. The modules and textbook were great help. So is the internet.
+    -> I learnt the concept of design patterns through this assignment.
+
+How to run:
+    -> The simplest way to run this program is to run "make run"
+    -> To compile the files seperately use the command: `g++ -o event_manager main.cpp event.cpp eventUi.cpp`
