@@ -1,0 +1,67 @@
+Start testing: Nov 01 01:09 CDT
+----------------------------------------------------------
+1/1 Testing: myStringTest
+1/1 Test: myStringTest
+Command: "/Users/saurabhmishra/Documents/CS500/Assignments/Project1/CS500/Project1/lab09/build/myStringTest"
+Directory: /Users/saurabhmishra/Documents/CS500/Assignments/Project1/CS500/Project1/lab09/build
+"myStringTest" start time: Nov 01 01:09 CDT
+Output:
+----------------------------------------------------------
+Running main() from /Users/saurabhmishra/Documents/CS500/Assignments/Project1/CS500/Project1/lab09/googletest/googletest/src/gtest_main.cc
+[==========] Running 20 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 20 tests from MyStringTest
+[ RUN      ] MyStringTest.Constructor_ValidInput
+[       OK ] MyStringTest.Constructor_ValidInput (0 ms)
+[ RUN      ] MyStringTest.Constructor_EmptyInput
+[       OK ] MyStringTest.Constructor_EmptyInput (0 ms)
+[ RUN      ] MyStringTest.Destructor_CleansUpMemory
+[       OK ] MyStringTest.Destructor_CleansUpMemory (0 ms)
+[ RUN      ] MyStringTest.ToString_ReturnsCorrectString
+[       OK ] MyStringTest.ToString_ReturnsCorrectString (0 ms)
+[ RUN      ] MyStringTest.Length_ReturnsCorrectLength
+[       OK ] MyStringTest.Length_ReturnsCorrectLength (0 ms)
+[ RUN      ] MyStringTest.Length_EmptyString
+[       OK ] MyStringTest.Length_EmptyString (0 ms)
+[ RUN      ] MyStringTest.Substr_ValidSubstring
+[       OK ] MyStringTest.Substr_ValidSubstring (0 ms)
+[ RUN      ] MyStringTest.Substr_OutOfBounds
+[       OK ] MyStringTest.Substr_OutOfBounds (0 ms)
+[ RUN      ] MyStringTest.OperatorPlus_ValidConcatenation
+[       OK ] MyStringTest.OperatorPlus_ValidConcatenation (0 ms)
+[ RUN      ] MyStringTest.OperatorPlusEquals_ValidAppend
+[       OK ] MyStringTest.OperatorPlusEquals_ValidAppend (0 ms)
+[ RUN      ] MyStringTest.OutputStreamOperator
+[       OK ] MyStringTest.OutputStreamOperator (0 ms)
+[ RUN      ] MyStringTest.IndexingOperator_ValidIndex
+[       OK ] MyStringTest.IndexingOperator_ValidIndex (0 ms)
+[ RUN      ] MyStringTest.IndexingOperator_OutOfBounds
+[       OK ] MyStringTest.IndexingOperator_OutOfBounds (0 ms)
+[ RUN      ] MyStringTest.OperatorEquals
+[       OK ] MyStringTest.OperatorEquals (0 ms)
+[ RUN      ] MyStringTest.OperatorNotEquals
+[       OK ] MyStringTest.OperatorNotEquals (0 ms)
+[ RUN      ] MyStringTest.OperatorLessThan
+[       OK ] MyStringTest.OperatorLessThan (0 ms)
+[ RUN      ] MyStringTest.OperatorGreaterThan
+[       OK ] MyStringTest.OperatorGreaterThan (0 ms)
+[ RUN      ] MyStringTest.OperatorLessThanOrEqual
+[       OK ] MyStringTest.OperatorLessThanOrEqual (0 ms)
+[ RUN      ] MyStringTest.OperatorGreaterThanOrEqual
+[       OK ] MyStringTest.OperatorGreaterThanOrEqual (0 ms)
+[ RUN      ] MyStringTest.HandleMemoryManagement
+[       OK ] MyStringTest.HandleMemoryManagement (0 ms)
+[----------] 20 tests from MyStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 20 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 20 tests.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"myStringTest" end time: Nov 01 01:09 CDT
+"myStringTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 01 01:09 CDT
