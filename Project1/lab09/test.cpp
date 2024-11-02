@@ -1,6 +1,13 @@
 #include <gtest/gtest.h>
 #include "myString.h"
 
+/*
+ * I prompted Chatgpt 3.0 with the header file and the following prompt
+ * "Write a google testing framework test file with cases testing all scenarios for each function. 
+ * Include testing of edge cases too"
+ * I had a mistake in my constructor implementation that was pointed out by GPT. Then it told me to
+ * fix it using a copy constructor. Did that and the tests ran like magic!
+ */
 class MyStringTest : public ::testing::Test {
 protected:
     void SetUp() override {
