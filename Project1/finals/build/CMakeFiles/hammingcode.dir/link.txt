@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.1.sdk -dynamiclib -Wl,-headerpad_max_install_names -o libhammingcode.dylib -install_name @rpath/libhammingcode.dylib CMakeFiles/hammingcode.dir/hamming.cpp.o

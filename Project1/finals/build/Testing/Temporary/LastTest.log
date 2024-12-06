@@ -1,0 +1,80 @@
+Start testing: Dec 06 13:31 CST
+----------------------------------------------------------
+1/1 Testing: hamming_test
+1/1 Test: hamming_test
+Command: "/Users/saurabhmishra/Documents/CS500/final/CS500-mkarvann/Project-HammingCode/build/hamming_test"
+Directory: /Users/saurabhmishra/Documents/CS500/final/CS500-mkarvann/Project-HammingCode/build
+"hamming_test" start time: Dec 06 13:31 CST
+Output:
+----------------------------------------------------------
+Running main() from /Users/saurabhmishra/Documents/CS500/final/CS500-mkarvann/Project-HammingCode/googletest/googletest/src/gtest_main.cc
+[==========] Running 15 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 15 tests from HammingCodeTest
+[ RUN      ] HammingCodeTest.DecodeValidCodeword
+[       OK ] HammingCodeTest.DecodeValidCodeword (0 ms)
+[ RUN      ] HammingCodeTest.DecodeSingleBitError
+[       OK ] HammingCodeTest.DecodeSingleBitError (0 ms)
+[ RUN      ] HammingCodeTest.DecodeEvenParityCode
+/Users/saurabhmishra/Documents/CS500/final/CS500-mkarvann/Project-HammingCode/hamming_test.cpp:28: Failure
+Expected equality of these values:
+  result
+    Which is: { 1, 0, 0, 1 }
+  std::vector<int>({1, 0, 1, 0})
+    Which is: { 1, 0, 1, 0 }
+
+[  FAILED  ] HammingCodeTest.DecodeEvenParityCode (0 ms)
+[ RUN      ] HammingCodeTest.MatrixMultiplyMod2
+[       OK ] HammingCodeTest.MatrixMultiplyMod2 (0 ms)
+[ RUN      ] HammingCodeTest.CorrectError
+[       OK ] HammingCodeTest.CorrectError (0 ms)
+[ RUN      ] HammingCodeTest.CorrectErrorNoChange
+[       OK ] HammingCodeTest.CorrectErrorNoChange (0 ms)
+[ RUN      ] HammingCodeTest.VectorToString
+[       OK ] HammingCodeTest.VectorToString (0 ms)
+[ RUN      ] HammingCodeTest.DecodeFileInvalid
+[       OK ] HammingCodeTest.DecodeFileInvalid (0 ms)
+[ RUN      ] HammingCodeTest.DecodeSingleBitErrorInParity
+/Users/saurabhmishra/Documents/CS500/final/CS500-mkarvann/Project-HammingCode/hamming_test.cpp:77: Failure
+Expected equality of these values:
+  result
+    Which is: { 1, 1, 0, 0 }
+  std::vector<int>({1, 0, 1, 0})
+    Which is: { 1, 0, 1, 0 }
+
+[  FAILED  ] HammingCodeTest.DecodeSingleBitErrorInParity (0 ms)
+[ RUN      ] HammingCodeTest.DecodeMinimumValidCode
+[       OK ] HammingCodeTest.DecodeMinimumValidCode (0 ms)
+[ RUN      ] HammingCodeTest.MatrixMultiplyMod2IdentityMatrix
+[       OK ] HammingCodeTest.MatrixMultiplyMod2IdentityMatrix (0 ms)
+[ RUN      ] HammingCodeTest.DecodeFileLargeValid
+/Users/saurabhmishra/Documents/CS500/final/CS500-mkarvann/Project-HammingCode/hamming_test.cpp:110: Failure
+Expected: (output.find("Decoded data: 1111")) != (std::string::npos), actual: 18446744073709551615 vs 18446744073709551615
+
+[  FAILED  ] HammingCodeTest.DecodeFileLargeValid (6 ms)
+[ RUN      ] HammingCodeTest.DecodeEmptyVector
+[       OK ] HammingCodeTest.DecodeEmptyVector (0 ms)
+[ RUN      ] HammingCodeTest.DecodeAllZeroCode
+[       OK ] HammingCodeTest.DecodeAllZeroCode (0 ms)
+[ RUN      ] HammingCodeTest.DecodeAllOneCode
+[       OK ] HammingCodeTest.DecodeAllOneCode (0 ms)
+[----------] 15 tests from HammingCodeTest (6 ms total)
+
+[----------] Global test environment tear-down
+[==========] 15 tests from 1 test suite ran. (6 ms total)
+[  PASSED  ] 12 tests.
+[  FAILED  ] 3 tests, listed below:
+[  FAILED  ] HammingCodeTest.DecodeEvenParityCode
+[  FAILED  ] HammingCodeTest.DecodeSingleBitErrorInParity
+[  FAILED  ] HammingCodeTest.DecodeFileLargeValid
+
+ 3 FAILED TESTS
+<end of output>
+Test time =   0.17 sec
+----------------------------------------------------------
+Test Failed.
+"hamming_test" end time: Dec 06 13:31 CST
+"hamming_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Dec 06 13:31 CST

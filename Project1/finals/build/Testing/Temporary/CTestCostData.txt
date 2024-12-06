@@ -1,0 +1,3 @@
+hamming_test 0 0
+---
+hamming_test

@@ -1,0 +1,87 @@
+\doxysection{Hamming\+Code Class Reference}
+\hypertarget{class_hamming_code}{}\label{class_hamming_code}\index{HammingCode@{HammingCode}}
+
+
+Implements (7,4) Hamming Code operations, including encoding, decoding, and error correction. This class provides methods for decoding Hamming (7,4) encoded code words, correcting single-\/bit errors, and detecting multiple errors. It uses matrix multiplication modulo 2 for error detection and correction.  
+
+
+
+
+{\ttfamily \#include $<$hamming.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_hamming_code_a1592ecf605b22112b5298da79de499d5}\label{class_hamming_code_a1592ecf605b22112b5298da79de499d5} 
+{\bfseries Hamming\+Code} ()
+\begin{DoxyCompactList}\small\item\em Constructor to initialize the generator and parity-\/check matrices. This constructor initializes the generator and parity-\/check matrices that are used for encoding and decoding Hamming code words. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hamming_code_a4691dd2ebe390dad9ee876ecb5c6aa63}{decode\+File}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Decodes Hamming (7,4) code words from a file and corrects errors if possible. Reads a file containing encoded Hamming (7,4) code words, decodes each word, and prints the decoded data. If an error is detected, it tries to correct it. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_hamming_code_ae785eac0259211502a35af30274fa467}{decode\+Word}} (const std\+::vector$<$ int $>$ \&code)
+\begin{DoxyCompactList}\small\item\em Decodes a single Hamming (7,4) code word. Decodes the input 7-\/bit Hamming code word, correcting any single-\/bit errors and extracting the data bits. If multiple errors are detected, it throws an exception. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{class_hamming_code_a4b7d294edf75451206f98017993aa364}{matrix\+Multiply\+Mod2}} (const Eigen\+::\+Matrix$<$ int, Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$ \&matrix, const std\+::vector$<$ int $>$ \&vector)
+\begin{DoxyCompactList}\small\item\em Multiplies a binary vector by a matrix (mod 2). Performs matrix multiplication (mod 2) between a matrix and a vector for error detection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implements (7,4) Hamming Code operations, including encoding, decoding, and error correction. This class provides methods for decoding Hamming (7,4) encoded code words, correcting single-\/bit errors, and detecting multiple errors. It uses matrix multiplication modulo 2 for error detection and correction. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_hamming_code_a4691dd2ebe390dad9ee876ecb5c6aa63}\index{HammingCode@{HammingCode}!decodeFile@{decodeFile}}
+\index{decodeFile@{decodeFile}!HammingCode@{HammingCode}}
+\doxysubsubsection{\texorpdfstring{decodeFile()}{decodeFile()}}
+{\footnotesize\ttfamily \label{class_hamming_code_a4691dd2ebe390dad9ee876ecb5c6aa63} 
+void Hamming\+Code\+::decode\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Decodes Hamming (7,4) code words from a file and corrects errors if possible. Reads a file containing encoded Hamming (7,4) code words, decodes each word, and prints the decoded data. If an error is detected, it tries to correct it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file containing Hamming (7,4) code words. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_hamming_code_ae785eac0259211502a35af30274fa467}\index{HammingCode@{HammingCode}!decodeWord@{decodeWord}}
+\index{decodeWord@{decodeWord}!HammingCode@{HammingCode}}
+\doxysubsubsection{\texorpdfstring{decodeWord()}{decodeWord()}}
+{\footnotesize\ttfamily \label{class_hamming_code_ae785eac0259211502a35af30274fa467} 
+std\+::vector$<$ int $>$ Hamming\+Code\+::decode\+Word (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{code}{}\end{DoxyParamCaption})}
+
+
+
+Decodes a single Hamming (7,4) code word. Decodes the input 7-\/bit Hamming code word, correcting any single-\/bit errors and extracting the data bits. If multiple errors are detected, it throws an exception. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & A 7-\/bit code word as a vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The 4-\/bit decoded data as a vector, or an error message if multiple errors are detected. 
+\end{DoxyReturn}
+\Hypertarget{class_hamming_code_a4b7d294edf75451206f98017993aa364}\index{HammingCode@{HammingCode}!matrixMultiplyMod2@{matrixMultiplyMod2}}
+\index{matrixMultiplyMod2@{matrixMultiplyMod2}!HammingCode@{HammingCode}}
+\doxysubsubsection{\texorpdfstring{matrixMultiplyMod2()}{matrixMultiplyMod2()}}
+{\footnotesize\ttfamily \label{class_hamming_code_a4b7d294edf75451206f98017993aa364} 
+std\+::vector$<$ int $>$ Hamming\+Code\+::matrix\+Multiply\+Mod2 (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Matrix$<$ int, Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$ \&}]{matrix}{, }\item[{const std\+::vector$<$ int $>$ \&}]{vector}{}\end{DoxyParamCaption})}
+
+
+
+Multiplies a binary vector by a matrix (mod 2). Performs matrix multiplication (mod 2) between a matrix and a vector for error detection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & The Eigen matrix to multiply with. \\
+\hline
+{\em vector} & The binary vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The resulting binary vector (mod 2). 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+hamming.\+h\end{DoxyCompactItemize}
